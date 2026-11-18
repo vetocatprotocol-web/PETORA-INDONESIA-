@@ -149,3 +149,19 @@ Dashboard dan akses fitur disesuaikan dengan role pengguna.
 
 **Total: 25 modul bisnis utama**, didukung fitur lintas modul, tiga application surfaces, dan dashboard berdasarkan role.
 
+## **9. Larangan mutlak**
+
+| Larangan | Arti praktis |
+| --- | --- |
+| Stub / placeholder / TODO / FIXME | Tidak ada fitur “seolah jadi” |
+| Tombol/link/form mati | Semua kontrol harus bekerja |
+| Mock/dummy sebagai data produksi | Tidak boleh seolah data nyata |
+| Fake success | “Tersimpan” hanya jika benar-benar ke DB |
+| Hardcode bisnis | Harga, pajak, stok, role, threshold dari DB/config |
+| Service role di client | Tidak di NEXT_PUBLIC_*, log, atau repo |
+| Write kritis dari client berantai | Checkout/stok/finalisasi wajib RPC atomic |
+| Docs tidak dipakai / duplikat | Dokumentasi hanya yang berguna |
+| Klaim selesai tanpa bukti | Harus bisa diverifikasi |
+| Melemahkan keamanan | Tidak mematikan RLS / policy true sembarangan |
+| Remote Supabase/deploy tanpa perintah user | Tidak db push / link / deploy sendiri |
+
